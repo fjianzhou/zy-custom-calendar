@@ -20,6 +20,7 @@
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding: 12px 0;
+  background-color: #48587e;
 }
 .ant-picker-calendar-header .ant-picker-calendar-year-select {
   min-width: 80px;
@@ -41,13 +42,15 @@
 .ant-picker-calendar .ant-picker-panel .ant-picker-date-panel {
   width: auto;
 }
+.ant-picker-date-panel {
+  background-color: #2d3551;
+  padding: 8px 12px;
+}
 .ant-picker-calendar .ant-picker-panel .ant-picker-body {
   padding: 8px 0;
 }
 .ant-picker-calendar .ant-picker-panel .ant-picker-content {
   width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
 }
 .ant-picker-calendar-mini {
   border-radius: 2px;
@@ -73,6 +76,7 @@
   text-align: right;
   background: #fff;
   border: 0;
+  outline: none;
 }
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-body th,
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-body td {
@@ -84,25 +88,22 @@
   line-height: 18px;
 }
 .ant-picker-cell {
-  padding: 3px 0;
-  color: rgba(0, 0, 0, 0.25);
+  color: #f5f5f5;
+  opacity: 0.5;
   cursor: pointer;
 }
-
-.ant-picker-cell-in-view {
-  color: rgba(0, 0, 0, 0.65);
+.ant-picker-cell-inner {
+  color: #f5f5f5;
 }
+.ant-picker-cell-in-view {
+  opacity: 1;
+}
+
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell::before {
   display: none;
 }
-f.ant-picker-calendar
-  .ant-picker-panel
-  .ant-picker-content
-  .ant-picker-calendar-full
-  .ant-picker-panel
-  .ant-picker-cell:hover
-  .ant-picker-calendar-date {
-  background: #f5f5f5;
+.ant-picker-calendar-full .ant-picker-panel .ant-picker-cell:hover .ant-picker-calendar-date {
+  background: #48587e;
 }
 .ant-picker-calendar-full
   .ant-picker-panel
@@ -147,6 +148,7 @@ f.ant-picker-calendar
   .ant-picker-calendar-date-value {
   color: #1890ff;
 }
+
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date {
   display: block;
   width: auto;
@@ -159,17 +161,18 @@ f.ant-picker-calendar
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
+
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date-value {
   line-height: 24px;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
+
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date-content {
   position: static;
   width: auto;
   height: 86px;
   overflow-y: auto;
-  color: rgba(0, 0, 0, 0.65);
   line-height: 1.5715;
   text-align: left;
 }
@@ -223,4 +226,13 @@ f.ant-picker-calendar
   .ant-picker-panel
   .ant-picker-calendar-date-content {
   text-align: right;
+}
+
+.ant-picker-calendar .ant-picker-panel .ant-picker-content {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.ant-picker-calendar .ant-picker-panel .ant-picker-content thead tr {
+  color: #fff;
 }

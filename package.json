@@ -1,6 +1,6 @@
 {
-  "name": "fjz-test-picker",
-  "version": "0.0.3",
+  "name": "zy-custom-picker",
+  "version": "0.0.7",
   "main": "./lib/index",
   "files": [
     "assets/*.css",
@@ -8,9 +8,10 @@
     "es",
     "lib",
     "dist"
+
   ],
   "license": "MIT",
-   "scripts": {
+  "scripts": {
     "compile": "father build && lessc assets/index.less assets/index.css"
   },
   "dependencies": {
